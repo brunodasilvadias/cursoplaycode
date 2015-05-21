@@ -1,0 +1,46 @@
+<?php
+header("Content-Type: text/html; charset=utf-8");
+/********************************************************************* 
+	Tarefa 8 - Desafio: 
+		Crie uma função com o nome que preferir. Ela vai receber o
+		parâmetro estado, e deve retornar a região que esse estado
+		pertence. Se ela receber SP por exemplo, deve retornar Sudeste.
+**********************************************************************/
+
+function revelaRegiao($estado){
+	
+	if ( $estado == "RS" || $estado == "SC" || $estado == "PR"){
+		
+		return "Região Sul";
+	}
+	
+	if ( $estado == "MG" || $estado == "SP" || $estado == "ES" || $estado == "RJ"){
+		
+		return "Região Sudeste";
+	}
+	
+	if ( $estado == "DF" || $estado == "GO" || $estado == "MT" || $estado == "MS"){
+		
+		return "Região Centro-Oeste";
+	}
+	
+	if ( $estado == "BA" || $estado == "CE" || $estado == "PI" 
+	|| $estado == "PE" || $estado == "SE" || $estado == "AL" 
+	|| $estado == "PB" || $estado == "RN" || $estado == "MA" ){
+	
+		return "Região Nordeste";	
+	}
+	
+	if ( $estado == "TO" || $estado == "PA" || $estado == "AM" || $estado == "RR" 
+	|| $estado == "AM" || $estado == "RO" || $estado == "AC"){
+		
+		return "Região Norte";
+	}
+	else {
+		return "Região inexistênte.";
+	}
+	
+}
+
+echo revelaRegiao("RJ");
+?>
