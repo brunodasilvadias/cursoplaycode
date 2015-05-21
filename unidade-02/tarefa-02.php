@@ -1,0 +1,13 @@
+<?php
+/************************************************************* 
+	Tarefa 2: 
+    Definir uma função que calcule a comissão dos vendedores
+    de uma loja. O percentual de comissão é 10%.
+**************************************************************/
+function calcular_comissao($vendas){
+    $comissao = ($vendas * 10) / 100;
+    return $comissao;
+}
+
+echo calcular_comissao($_GET['vendas']);
+?>

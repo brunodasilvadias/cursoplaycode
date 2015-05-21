@@ -1,0 +1,21 @@
+<?php
+/********************************************************** 
+	Tarefa 4: 
+    Criar uma função que mostra a mensagem "Faltam X anos
+    para a sua aposentadoria"
+***********************************************************/
+
+// Comece esse exercício copiando e colando a função que criou no exercício
+// anterior. A nova função que você vai criar, deve usar essa função anterior.
+function calcular_aposentadoria($idade_atual) {
+    return 65 - $idade_atual;
+}
+
+function mensagem_aposentadoria($idade_atual) {
+    $anos = calcular_aposentadoria($idade_atual);
+    $mensagem = "Faltam $anos anos para a sua aposentadoria";
+    return $mensagem;
+}
+
+echo mensagem_aposentadoria($_GET['idade_atual']);
+?>
